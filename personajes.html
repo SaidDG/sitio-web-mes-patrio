@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personajes ilustres · Mes Patrio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --verde: #1F6E43;
+    --verde-suave: #E7F2EB;
+    --rojo: #B23A2E;
+    --rojo-suave: #F7E8E6;
+    --fondo: #FAF9F6;
+    --papel: #FFFFFF;
+    --texto: #2B2B28;
+    --texto-suave: #6B685F;
+    --borde: #E3E0D8;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background:var(--fondo);
+    color:var(--texto);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+  }
+  h1, h2, h3{
+    font-family:'Zilla Slab', serif;
+    margin:0;
+    font-weight:700;
+  }
+  a{ color:inherit; }
+  .franja{ height:6px; display:flex; }
+  .franja span{ flex:1; }
+  .franja .v{ background:var(--verde); }
+  .franja .b{ background:var(--papel); border-top:1px solid var(--borde); border-bottom:1px solid var(--borde); }
+  .franja .r{ background:var(--rojo); }
+
+  header{
+    background:var(--papel);
+    padding:48px 24px 40px;
+    text-align:center;
+    border-bottom:1px solid var(--borde);
+  }
+  header .fecha{
+    color:var(--rojo);
+    font-weight:600;
+    letter-spacing:0.02em;
+    margin-bottom:14px;
+  }
+  header h1{
+    font-size:clamp(1.8rem, 4vw, 2.6rem);
+    color:var(--verde);
+    max-width:760px;
+    margin:0 auto;
+  }
+
+  nav{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    flex-wrap:wrap;
+    padding:20px 16px;
+    background:var(--papel);
+    border-bottom:1px solid var(--borde);
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  nav a{
+    text-decoration:none;
+    padding:9px 18px;
+    border-radius:999px;
+    border:1.5px solid var(--verde);
+    color:var(--verde);
+    font-weight:600;
+    font-size:0.92rem;
+    transition:background .15s ease, color .15s ease;
+  }
+  nav a:hover{ background:var(--verde); color:#fff; }
+  nav a.activo{ background:var(--verde); color:#fff; }
+
+  main{
+    max-width:840px;
+    margin:0 auto;
+    padding:64px 24px;
+  }
+
+  .eyebrow{
+    color:var(--rojo);
+    font-weight:600;
+    font-size:0.9rem;
+    margin-bottom:6px;
+  }
+  section h2{
+    font-size:1.9rem;
+    color:var(--texto);
+    margin-bottom:8px;
+  }
+  section > .intro{
+    color:var(--texto-suave);
+    max-width:620px;
+    margin-bottom:36px;
+  }
+
+  .personaje{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    border-left:4px solid var(--verde);
+    background:var(--papel);
+    padding:20px 24px;
+    margin-bottom:16px;
+    border-radius:0 6px 6px 0;
+    overflow:hidden;
+  }
+  .personaje-texto{ flex:1; min-width:0; }
+  .personaje h3{
+    font-size:1.15rem;
+    color:var(--verde);
+    margin-bottom:6px;
+  }
+  .personaje p{
+    margin:0;
+    color:var(--texto-suave);
+  }
+  .personaje-foto{
+    flex-shrink:0;
+    width:88px;
+    height:88px;
+    border-radius:50%;
+    overflow:hidden;
+    background:var(--verde-suave);
+    border:2px solid var(--verde);
+  }
+  .personaje-foto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .personaje-foto.sin-foto{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .personaje-foto.sin-foto img{ display:none; }
+  .personaje-foto.sin-foto::after{
+    content:"Foto";
+    font-size:0.72rem;
+    color:var(--verde);
+    font-weight:600;
+  }
+  @media (max-width:520px){
+    .personaje-foto{ width:64px; height:64px; }
+  }
+
+  footer{
+    text-align:center;
+    padding:36px 24px;
+    color:var(--texto-suave);
+    font-size:0.88rem;
+    border-top:1px solid var(--borde);
+  }
+  .footer-datos{
+    margin-top:12px;
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+    font-weight:600;
+    color:var(--texto);
+  }
+  .footer-datos span{ color:var(--texto-suave); font-weight:400; }
+</style>
+</head>
+<body>
+
+<div class="franja"><span class="v"></span><span class="b"></span><span class="r"></span></div>
+
+<header>
+  <div class="fecha">Septiembre · Mes de la Patria</div>
+  <h1>Personajes ilustres</h1>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="linea-tiempo.html">Fechas importantes</a>
+  <a href="personajes.html" class="activo">Personajes ilustres</a>
+  <a href="datos-mitos.html">Datos y mitos</a>
+</nav>
+
+<main>
+  <section>
+    <div class="eyebrow">Protagonistas de la historia</div>
+    <h2>Personajes ilustres</h2>
+    <p class="intro">Hombres y mujeres cuyas decisiones cambiaron el rumbo del país.</p>
+
+    <!--
+      ESPACIO PARA AGREGAR LAS FOTOS DE LOS PERSONAJES:
+      Cada tarjeta de personaje tiene una etiqueta <img src="TU_IMAGEN_AQUI" ...>.
+      Para poner tu imagen, cambia "TU_IMAGEN_AQUI" por la ruta o el nombre del archivo,
+      por ejemplo: src="fotos/hidalgo.jpg"
+      Si guardas las imágenes en una carpeta llamada "fotos" junto a este archivo HTML,
+      solo necesitas escribir fotos/nombre-del-archivo.jpg
+    -->
+
+    <div class="personaje">
+      <div class="personaje-texto">
+        <h3>Miguel Hidalgo y Costilla</h3>
+        <p>Cura del pueblo de Dolores. Convocó al pueblo a levantarse en armas la madrugada del 16 de septiembre de 1810.</p>
+      </div>
+      <div class="personaje-foto">
+        <!-- AQUI VA LA FOTO DE MIGUEL HIDALGO Y COSTILLA -->
+        <img src="img1.jpg" alt="Miguel Hidalgo y Costilla" onerror="this.parentElement.classList.add('sin-foto')">
+      </div>
+    </div>
+    <div class="personaje">
+      <div class="personaje-texto">
+        <h3>Josefa Ortiz de Domínguez</h3>
+        <p>Conocida como "La Corregidora". Avisó a los insurgentes que la conspiración había sido descubierta, adelantando así el inicio del movimiento.</p>
+      </div>
+      <div class="personaje-foto">
+        <!-- AQUI VA LA FOTO DE JOSEFA ORTIZ DE DOMÍNGUEZ -->
+        <img src="img2.jpg" alt="Josefa Ortiz de Domínguez" onerror="this.parentElement.classList.add('sin-foto')">
+      </div>
+    </div>
+    <div class="personaje">
+      <div class="personaje-texto">
+        <h3>Ignacio Allende</h3>
+        <p>Militar criollo que se unió a la conspiración de Querétaro y comandó las primeras tropas insurgentes.</p>
+      </div>
+      <div class="personaje-foto">
+        <!-- AQUI VA LA FOTO DE IGNACIO ALLENDE -->
+        <img src="img3.jpg" alt="Ignacio Allende" onerror="this.parentElement.classList.add('sin-foto')">
+      </div>
+    </div>
+    <div class="personaje">
+      <div class="personaje-texto">
+        <h3>José María Morelos y Pavón</h3>
+        <p>Continuó la lucha tras la muerte de Hidalgo y convocó el Congreso de Chilpancingo, donde se planteó la primera constitución del país.</p>
+      </div>
+      <div class="personaje-foto">
+        <!-- AQUI VA LA FOTO DE JOSÉ MARÍA MORELOS Y PAVÓN -->
+        <img src="img4.jpg" alt="José María Morelos y Pavón" onerror="this.parentElement.classList.add('sin-foto')">
+      </div>
+    </div>
+    <div class="personaje">
+      <div class="personaje-texto">
+        <h3>Vicente Guerrero</h3>
+        <p>Junto con Agustín de Iturbide, firmó el Plan de Iguala, acuerdo que llevó a la consumación de la independencia en 1821.</p>
+      </div>
+      <div class="personaje-foto">
+        <!-- AQUI VA LA FOTO DE VICENTE GUERRERO -->
+        <img src="img5.jpg" alt="Vicente Guerrero" onerror="this.parentElement.classList.add('sin-foto')">
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-datos">
+    <div><span>Alumno: </span>Duarte Granados Said</div>
+    <div><span>No. de control: </span>0833</div>
+    <div><span>Grupo: </span>5-J</div>
+  </div>
+</footer>
+
+</body>
+</html>

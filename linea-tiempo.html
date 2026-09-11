@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fechas importantes · Mes Patrio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --verde: #1F6E43;
+    --verde-suave: #E7F2EB;
+    --rojo: #B23A2E;
+    --rojo-suave: #F7E8E6;
+    --fondo: #FAF9F6;
+    --papel: #FFFFFF;
+    --texto: #2B2B28;
+    --texto-suave: #6B685F;
+    --borde: #E3E0D8;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background:var(--fondo);
+    color:var(--texto);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+  }
+  h1, h2, h3{
+    font-family:'Zilla Slab', serif;
+    margin:0;
+    font-weight:700;
+  }
+  a{ color:inherit; }
+  .franja{ height:6px; display:flex; }
+  .franja span{ flex:1; }
+  .franja .v{ background:var(--verde); }
+  .franja .b{ background:var(--papel); border-top:1px solid var(--borde); border-bottom:1px solid var(--borde); }
+  .franja .r{ background:var(--rojo); }
+
+  header{
+    background:var(--papel);
+    padding:48px 24px 40px;
+    text-align:center;
+    border-bottom:1px solid var(--borde);
+  }
+  header .fecha{
+    color:var(--rojo);
+    font-weight:600;
+    letter-spacing:0.02em;
+    margin-bottom:14px;
+  }
+  header h1{
+    font-size:clamp(1.8rem, 4vw, 2.6rem);
+    color:var(--verde);
+    max-width:760px;
+    margin:0 auto;
+  }
+
+  nav{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    flex-wrap:wrap;
+    padding:20px 16px;
+    background:var(--papel);
+    border-bottom:1px solid var(--borde);
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  nav a{
+    text-decoration:none;
+    padding:9px 18px;
+    border-radius:999px;
+    border:1.5px solid var(--verde);
+    color:var(--verde);
+    font-weight:600;
+    font-size:0.92rem;
+    transition:background .15s ease, color .15s ease;
+  }
+  nav a:hover{ background:var(--verde); color:#fff; }
+  nav a.activo{ background:var(--verde); color:#fff; }
+
+  main{
+    max-width:840px;
+    margin:0 auto;
+    padding:64px 24px;
+  }
+
+  .eyebrow{
+    color:var(--rojo);
+    font-weight:600;
+    font-size:0.9rem;
+    margin-bottom:6px;
+  }
+  section h2{
+    font-size:1.9rem;
+    color:var(--texto);
+    margin-bottom:8px;
+  }
+  section > .intro{
+    color:var(--texto-suave);
+    max-width:620px;
+    margin-bottom:36px;
+  }
+
+  .linea{
+    position:relative;
+    padding-left:32px;
+    border-left:3px solid var(--verde);
+  }
+  .hito{
+    position:relative;
+    padding-bottom:36px;
+  }
+  .hito:last-child{ padding-bottom:0; }
+  .hito::before{
+    content:"";
+    position:absolute;
+    left:-40px;
+    top:4px;
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:var(--rojo);
+    border:3px solid var(--fondo);
+  }
+  .hito .dia{
+    display:inline-block;
+    color:var(--rojo);
+    font-weight:700;
+    font-family:'Zilla Slab', serif;
+    font-size:1.05rem;
+    margin-bottom:4px;
+  }
+  .hito h3{
+    font-size:1.15rem;
+    margin-bottom:6px;
+  }
+  .hito p{
+    color:var(--texto-suave);
+    margin:0;
+    max-width:560px;
+  }
+
+  footer{
+    text-align:center;
+    padding:36px 24px;
+    color:var(--texto-suave);
+    font-size:0.88rem;
+    border-top:1px solid var(--borde);
+  }
+  .footer-datos{
+    margin-top:12px;
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+    font-weight:600;
+    color:var(--texto);
+  }
+  .footer-datos span{ color:var(--texto-suave); font-weight:400; }
+</style>
+</head>
+<body>
+
+<div class="franja"><span class="v"></span><span class="b"></span><span class="r"></span></div>
+
+<header>
+  <div class="fecha">Septiembre · Mes de la Patria</div>
+  <h1>Fechas importantes</h1>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="linea-tiempo.html" class="activo">Fechas importantes</a>
+  <a href="personajes.html">Personajes ilustres</a>
+  <a href="datos-mitos.html">Datos y mitos</a>
+</nav>
+
+<main>
+  <section>
+    <div class="eyebrow">Línea de tiempo</div>
+    <h2>Fechas importantes</h2>
+    <p class="intro">Estos son los sucesos que marcan el calendario de septiembre, en el orden en que ocurren.</p>
+
+    <div class="linea">
+      <div class="hito">
+        <div class="dia">13 de septiembre</div>
+        <h3>Día de los Niños Héroes</h3>
+        <p>Se recuerda a los cadetes que defendieron el Castillo de Chapultepec durante la invasión estadounidense de 1847.</p>
+      </div>
+      <div class="hito">
+        <div class="dia">15 de septiembre, por la noche</div>
+        <h3>El Grito de Independencia</h3>
+        <p>En plazas de todo el país se conmemora el llamado a las armas que dio inicio a la lucha por la independencia en 1810.</p>
+      </div>
+      <div class="hito">
+        <div class="dia">16 de septiembre</div>
+        <h3>Día de la Independencia</h3>
+        <p>Fiesta nacional con desfiles cívico-militares en todo el territorio mexicano.</p>
+      </div>
+      <div class="hito">
+        <div class="dia">27 de septiembre</div>
+        <h3>Consumación de la Independencia</h3>
+        <p>En 1821, el Ejército Trigarante entró a la Ciudad de México, cerrando así once años de guerra.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-datos">
+    <div><span>Alumno: </span>Duarte Granados Said</div>
+    <div><span>No. de control: </span>0833</div>
+    <div><span>Grupo: </span>5-J</div>
+  </div>
+</footer>
+
+</body>
+</html>

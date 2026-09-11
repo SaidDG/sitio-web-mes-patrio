@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Septiembre, Mes Patrio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --verde: #1F6E43;
+    --verde-suave: #E7F2EB;
+    --rojo: #B23A2E;
+    --rojo-suave: #F7E8E6;
+    --fondo: #FAF9F6;
+    --papel: #FFFFFF;
+    --texto: #2B2B28;
+    --texto-suave: #6B685F;
+    --borde: #E3E0D8;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background:var(--fondo);
+    color:var(--texto);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+  }
+  h1, h2, h3{
+    font-family:'Zilla Slab', serif;
+    margin:0;
+    font-weight:700;
+  }
+  a{ color:inherit; }
+  .franja{ height:6px; display:flex; }
+  .franja span{ flex:1; }
+  .franja .v{ background:var(--verde); }
+  .franja .b{ background:var(--papel); border-top:1px solid var(--borde); border-bottom:1px solid var(--borde); }
+  .franja .r{ background:var(--rojo); }
+
+  header{
+    background:var(--papel);
+    padding:64px 24px 56px;
+    text-align:center;
+    border-bottom:1px solid var(--borde);
+  }
+  header .fecha{
+    color:var(--rojo);
+    font-weight:600;
+    letter-spacing:0.02em;
+    margin-bottom:14px;
+  }
+  header h1{
+    font-size:clamp(2.1rem, 5vw, 3.4rem);
+    color:var(--verde);
+    max-width:760px;
+    margin:0 auto 18px;
+  }
+  header p{
+    max-width:560px;
+    margin:0 auto;
+    color:var(--texto-suave);
+    font-size:1.05rem;
+  }
+
+  nav{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    flex-wrap:wrap;
+    padding:20px 16px;
+    background:var(--papel);
+    border-bottom:1px solid var(--borde);
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  nav a{
+    text-decoration:none;
+    padding:9px 18px;
+    border-radius:999px;
+    border:1.5px solid var(--verde);
+    color:var(--verde);
+    font-weight:600;
+    font-size:0.92rem;
+    transition:background .15s ease, color .15s ease;
+  }
+  nav a:hover{ background:var(--verde); color:#fff; }
+  nav a.activo{ background:var(--verde); color:#fff; }
+
+  main{
+    max-width:840px;
+    margin:0 auto;
+    padding:64px 24px;
+  }
+
+  .eyebrow{
+    color:var(--rojo);
+    font-weight:600;
+    font-size:0.9rem;
+    margin-bottom:6px;
+  }
+
+  .tarjetas{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+    margin-top:40px;
+  }
+  @media (max-width:700px){
+    .tarjetas{ grid-template-columns:1fr; }
+  }
+  .tarjeta{
+    display:block;
+    text-decoration:none;
+    background:var(--papel);
+    border:2px solid var(--verde);
+    border-radius:10px;
+    padding:28px 22px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .tarjeta:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(31,110,67,0.15);
+  }
+  .tarjeta .icono{
+    font-size:1.8rem;
+    margin-bottom:10px;
+    display:block;
+  }
+  .tarjeta h2{
+    font-size:1.25rem;
+    color:var(--verde);
+    margin-bottom:8px;
+  }
+  .tarjeta p{
+    margin:0;
+    color:var(--texto-suave);
+    font-size:0.95rem;
+  }
+
+  footer{
+    text-align:center;
+    padding:36px 24px;
+    color:var(--texto-suave);
+    font-size:0.88rem;
+    border-top:1px solid var(--borde);
+  }
+  .footer-datos{
+    margin-top:12px;
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+    font-weight:600;
+    color:var(--texto);
+  }
+  .footer-datos span{ color:var(--texto-suave); font-weight:400; }
+</style>
+</head>
+<body>
+
+<div class="franja"><span class="v"></span><span class="b"></span><span class="r"></span></div>
+
+<header>
+  <div class="fecha">Septiembre · Mes de la Patria</div>
+  <h1>Historia y tradición del mes patrio en México</h1>
+  <p>Un recorrido breve por las fechas, los personajes y las curiosidades que dan sentido a las fiestas de septiembre.</p>
+</header>
+
+<nav>
+  <a href="index.html" class="activo">Inicio</a>
+  <a href="linea-tiempo.html">Fechas importantes</a>
+  <a href="personajes.html">Personajes ilustres</a>
+  <a href="datos-mitos.html">Datos y mitos</a>
+</nav>
+
+<main>
+  <div class="eyebrow">Explora el contenido</div>
+  <h2 style="font-size:1.9rem;">¿Qué quieres conocer?</h2>
+
+  <div class="tarjetas">
+    <a class="tarjeta" href="linea-tiempo.html">
+      <h2>Fechas importantes</h2>
+      <p>Un recorrido cronológico por los sucesos clave de septiembre, desde los Niños Héroes hasta la Consumación de la Independencia.</p>
+    </a>
+    <a class="tarjeta" href="personajes.html">
+      <h2>Personajes ilustres</h2>
+      <p>Conoce a Hidalgo, Josefa Ortiz de Domínguez, Allende, Morelos y Guerrero, protagonistas de la independencia.</p>
+    </a>
+    <a class="tarjeta" href="datos-mitos.html">
+      <h2>Datos y mitos</h2>
+      <p>Curiosidades poco conocidas y creencias populares que no son del todo ciertas.</p>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-datos">
+    <div><span>Alumno: </span>Duarte Granados Said</div>
+    <div><span>No. de control: </span>0833</div>
+    <div><span>Grupo: </span>5-J</div>
+  </div>
+</footer>
+
+</body>
+</html>
