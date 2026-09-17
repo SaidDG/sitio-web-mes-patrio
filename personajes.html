@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Personajes ilustres · Mes Patrio</title>
+<!-- Vinculación de fuentes tipográficas desde Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+  /* Variables CSS globales para la paleta de colores patrios */
   :root{
     --verde: #1F6E43;
     --verde-suave: #E7F2EB;
@@ -18,6 +20,7 @@
     --texto-suave: #6B685F;
     --borde: #E3E0D8;
   }
+  /* Estilos generales del cuerpo de la página y tipografías */
   *{ box-sizing: border-box; }
   body{
     margin:0;
@@ -32,12 +35,15 @@
     font-weight:700;
   }
   a{ color:inherit; }
+  
+  /* Franja decorativa tricolor en la parte superior */
   .franja{ height:6px; display:flex; }
   .franja span{ flex:1; }
   .franja .v{ background:var(--verde); }
   .franja .b{ background:var(--papel); border-top:1px solid var(--borde); border-bottom:1px solid var(--borde); }
   .franja .r{ background:var(--rojo); }
 
+  /* Estilos del encabezado principal */
   header{
     background:var(--papel);
     padding:48px 24px 40px;
@@ -57,6 +63,7 @@
     margin:0 auto;
   }
 
+  /* Barra de navegación fija (sticky) con botones redondeados */
   nav{
     display:flex;
     justify-content:center;
@@ -82,12 +89,14 @@
   nav a:hover{ background:var(--verde); color:#fff; }
   nav a.activo{ background:var(--verde); color:#fff; }
 
+  /* Contenedor del contenido principal */
   main{
     max-width:840px;
     margin:0 auto;
     padding:64px 24px;
   }
 
+  /* Estilos para el texto secundario (eyebrow) y subtítulos */
   .eyebrow{
     color:var(--rojo);
     font-weight:600;
@@ -105,6 +114,7 @@
     margin-bottom:36px;
   }
 
+  /* Contenedor tipo fila para cada personaje (Flexbox) */
   .personaje{
     display:flex;
     align-items:center;
@@ -127,6 +137,8 @@
     margin:0;
     color:var(--texto-suave);
   }
+  
+  /* Contenedor de la foto circular del personaje */
   .personaje-foto{
     flex-shrink:0;
     width:88px;
@@ -142,6 +154,7 @@
     object-fit:cover;
     display:block;
   }
+  /* Estilos de respaldo en caso de que la imagen no cargue o no exista */
   .personaje-foto.sin-foto{
     display:flex;
     align-items:center;
@@ -154,10 +167,12 @@
     color:var(--verde);
     font-weight:600;
   }
+  /* Adaptación responsiva: reduce el tamaño de la foto en pantallas móviles */
   @media (max-width:520px){
     .personaje-foto{ width:64px; height:64px; }
   }
 
+  /* Estilos para el pie de página institucional */
   footer{
     text-align:center;
     padding:36px 24px;
@@ -179,13 +194,16 @@
 </head>
 <body>
 
+<!-- Franja tricolor superior -->
 <div class="franja"><span class="v"></span><span class="b"></span><span class="r"></span></div>
 
+<!-- Encabezado de la página -->
 <header>
   <div class="fecha">Septiembre · Mes de la Patria</div>
   <h1>Personajes ilustres</h1>
 </header>
 
+<!-- Menú de enlaces de navegación -->
 <nav>
   <a href="index.html">Inicio</a>
   <a href="linea-tiempo.html">Fechas importantes</a>
@@ -193,74 +211,72 @@
   <a href="datos-mitos.html">Datos y mitos</a>
 </nav>
 
+<!-- Bloque del contenido único e importante de la página -->
 <main>
   <section>
     <div class="eyebrow">Protagonistas de la historia</div>
     <h2>Personajes ilustres</h2>
     <p class="intro">Hombres y mujeres cuyas decisiones cambiaron el rumbo del país.</p>
 
-    <!--
-      ESPACIO PARA AGREGAR LAS FOTOS DE LOS PERSONAJES:
-      Cada tarjeta de personaje tiene una etiqueta <img src="TU_IMAGEN_AQUI" ...>.
-      Para poner tu imagen, cambia "TU_IMAGEN_AQUI" por la ruta o el nombre del archivo,
-      por ejemplo: src="fotos/hidalgo.jpg"
-      Si guardas las imágenes en una carpeta llamada "fotos" junto a este archivo HTML,
-      solo necesitas escribir fotos/nombre-del-archivo.jpg
-    -->
-
+    <!-- Lista de tarjetas de personajes históricos -->
+    <!-- Miguel Hidalgo -->
     <div class="personaje">
       <div class="personaje-texto">
         <h3>Miguel Hidalgo y Costilla</h3>
         <p>Cura del pueblo de Dolores. Convocó al pueblo a levantarse en armas la madrugada del 16 de septiembre de 1810.</p>
       </div>
       <div class="personaje-foto">
-        <!-- AQUI VA LA FOTO DE MIGUEL HIDALGO Y COSTILLA -->
         <img src="img1.jpg" alt="Miguel Hidalgo y Costilla" onerror="this.parentElement.classList.add('sin-foto')">
       </div>
     </div>
+    
+    <!-- Josefa Ortiz -->
     <div class="personaje">
       <div class="personaje-texto">
         <h3>Josefa Ortiz de Domínguez</h3>
         <p>Conocida como "La Corregidora". Avisó a los insurgentes que la conspiración había sido descubierta, adelantando así el inicio del movimiento.</p>
       </div>
       <div class="personaje-foto">
-        <!-- AQUI VA LA FOTO DE JOSEFA ORTIZ DE DOMÍNGUEZ -->
         <img src="img2.jpg" alt="Josefa Ortiz de Domínguez" onerror="this.parentElement.classList.add('sin-foto')">
       </div>
     </div>
+    
+    <!-- Ignacio Allende -->
     <div class="personaje">
       <div class="personaje-texto">
         <h3>Ignacio Allende</h3>
         <p>Militar criollo que se unió a la conspiración de Querétaro y comandó las primeras tropas insurgentes.</p>
       </div>
       <div class="personaje-foto">
-        <!-- AQUI VA LA FOTO DE IGNACIO ALLENDE -->
         <img src="img3.jpg" alt="Ignacio Allende" onerror="this.parentElement.classList.add('sin-foto')">
       </div>
     </div>
+    
+    <!-- José María Morelos -->
     <div class="personaje">
       <div class="personaje-texto">
         <h3>José María Morelos y Pavón</h3>
         <p>Continuó la lucha tras la muerte de Hidalgo y convocó el Congreso de Chilpancingo, donde se planteó la primera constitución del país.</p>
       </div>
       <div class="personaje-foto">
-        <!-- AQUI VA LA FOTO DE JOSÉ MARÍA MORELOS Y PAVÓN -->
         <img src="img4.jpg" alt="José María Morelos y Pavón" onerror="this.parentElement.classList.add('sin-foto')">
       </div>
     </div>
+    
+    <!-- Vicente Guerrero -->
     <div class="personaje">
       <div class="personaje-texto">
         <h3>Vicente Guerrero</h3>
         <p>Junto con Agustín de Iturbide, firmó el Plan de Iguala, acuerdo que llevó a la consumación de la independencia en 1821.</p>
       </div>
       <div class="personaje-foto">
-        <!-- AQUI VA LA FOTO DE VICENTE GUERRERO -->
         <img src="img5.jpg" alt="Vicente Guerrero" onerror="this.parentElement.classList.add('sin-foto')">
       </div>
     </div>
   </section>
 </main>
 
+<!-- Pie de página con los datos escolares del estudiante -->
 <footer>
   <div class="footer-datos">
     <div><span>Alumno: </span>Duarte Granados Said</div>
