@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Septiembre, Mes Patrio</title>
+<title>Septiembre, Mes Patrio</title> <!-- aqui se stablece el titutlo de la pagina -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
+<style> /*se utiliza style para darle diseño a la pagina, como el color, la fuente, la barra de navegacion, el titulo. el fondo, el encabezado  */
   :root{
     --verde: #1F6E43;
     --verde-suave: #E7F2EB;
@@ -44,26 +44,26 @@
     text-align:center;
     border-bottom:1px solid var(--borde);
   }
-  header .fecha{
+  header .fecha{ /* aqui se establece el color fuente y tamaño de el texto "Septiembre mes de la patria" */
     color:var(--rojo);
     font-weight:600;
     letter-spacing:0.02em;
     margin-bottom:14px;
   }
-  header h1{
+  header h1{ /*aqui se establece el color fuente y tamaño del titulo principal de "Historia y tradición del mes patrio en México" */
     font-size:clamp(2.1rem, 5vw, 3.4rem);
     color:var(--verde);
     max-width:760px;
     margin:0 auto 18px;
   }
-  header p{
+  header p{ /* aqui se establece el color, tamaño y fuente del pequeño texto que aparece al inicio*/
     max-width:560px;
     margin:0 auto;
     color:var(--texto-suave);
     font-size:1.05rem;
   }
 
-  nav{
+  nav{ 
     display:flex;
     justify-content:center;
     gap:8px;
@@ -75,7 +75,7 @@
     top:0;
     z-index:10;
   }
-  nav a{
+  nav a{ /* aqui se establece el color, tamaño, borde de los botones de navegacion */ 
     text-decoration:none;
     padding:9px 18px;
     border-radius:999px;
@@ -94,14 +94,14 @@
     padding:64px 24px;
   }
 
-  .eyebrow{
+  .eyebrow{ /*especificaiones de el texto de "explora el conenido" */
     color:var(--rojo);
     font-weight:600;
     font-size:0.9rem;
     margin-bottom:6px;
   }
 
-  .tarjetas{
+  .tarjetas{ /* esta seccion son los apartados donde aparece infomacion de los apartados de fechas impoirtantes, personajes ilustres y datos y mitos  */
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
     gap:20px;
@@ -110,7 +110,7 @@
   @media (max-width:700px){
     .tarjetas{ grid-template-columns:1fr; }
   }
-  .tarjeta{
+  .tarjeta{ /* aqui se establecen las medidas de la tarjeta y el color del borde*/
     display:block;
     text-decoration:none;
     background:var(--papel);
@@ -123,11 +123,7 @@
     transform:translateY(-3px);
     box-shadow:0 8px 18px rgba(31,110,67,0.15);
   }
-  .tarjeta .icono{
-    font-size:1.8rem;
-    margin-bottom:10px;
-    display:block;
-  }
+
   .tarjeta h2{
     font-size:1.25rem;
     color:var(--verde);
@@ -139,13 +135,13 @@
     font-size:0.95rem;
   }
 
-  footer{
+  footer{ /*aqui editamos el pie de pagina estableciendo su color, el tamaño y la fuente  */
     text-align:center;
     padding:36px 24px;
     color:var(--texto-suave);
     font-size:0.88rem;
     border-top:1px solid var(--borde);
-  }
+  }  /*aqui se ponen los datos que queremos en el pie de pagina gracias al "footer-datos" que se llena mas abajo */ 
   .footer-datos{
     margin-top:12px;
     display:flex;
@@ -156,30 +152,30 @@
     color:var(--texto);
   }
   .footer-datos span{ color:var(--texto-suave); font-weight:400; }
-</style>
+</style> 
 </head>
 <body>
 
 <div class="franja"><span class="v"></span><span class="b"></span><span class="r"></span></div>
 
-<header>
+<header> <!-- esta es la infomacion que se va a mostrar en los apartados anteriores definidos -->
   <div class="fecha">Septiembre · Mes de la Patria</div>
   <h1>Historia y tradición del mes patrio en México</h1>
   <p>Un recorrido breve por las fechas, los personajes y las curiosidades que dan sentido a las fiestas de septiembre.</p>
 </header>
 
-<nav>
+<nav> <!-- aqui se establece lo que van a mostrar los botones -->
   <a href="index.html" class="activo">Inicio</a>
   <a href="linea-tiempo.html">Fechas importantes</a>
   <a href="personajes.html">Personajes ilustres</a>
   <a href="datos-mitos.html">Datos y mitos</a>
 </nav>
 
-<main>
+<main> <!-- aqui van la informacion que van a contener las tarjetas que danuna introduccion a los 3 distintos apartados  -->
   <div class="eyebrow">Explora el contenido</div>
   <h2 style="font-size:1.9rem;">¿Qué quieres conocer?</h2>
 
-  <div class="tarjetas">
+  <div class="tarjetas"> <!-- usando el class y el href se usa lo que ya habiamos establecido de las especificaciones de como queriamos que se mostrara las tarjetas  y para que funcione el boton --> 
     <a class="tarjeta" href="linea-tiempo.html">
       <h2>Fechas importantes</h2>
       <p>Un recorrido cronológico por los sucesos clave de septiembre, desde los Niños Héroes hasta la Consumación de la Independencia.</p>
@@ -195,8 +191,8 @@
   </div>
 </main>
 
-<footer>
-  <div class="footer-datos">
+<footer> <!--aqui es donde se ponen los datos que va a llvar el pie de pagina y aplicamos el estilo que ya habiamos puesto con "class"-->
+  <div class="footer-datos"> 
     <div><span>Alumno: </span>Duarte Granados Said</div>
     <div><span>No. de control: </span>0833</div>
     <div><span>Grupo: </span>5-J</div>
