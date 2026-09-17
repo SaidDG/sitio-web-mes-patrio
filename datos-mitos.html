@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Datos y mitos · Mes Patrio</title>
+<!-- Vinculación de fuentes tipográficas desde Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+  /* Variables CSS globales para guardar la paleta de colores del Mes Patrio */
   :root{
     --verde: #1F6E43;
     --verde-suave: #E7F2EB;
@@ -18,6 +20,7 @@
     --texto-suave: #6B685F;
     --borde: #E3E0D8;
   }
+  /* Estilos generales del cuerpo de la página y tipografías */
   *{ box-sizing: border-box; }
   body{
     margin:0;
@@ -32,13 +35,16 @@
     font-weight:700;
   }
   a{ color:inherit; }
+  
+  /* Franja tricolor decorativa (Verde, Blanco y Rojo) en la parte superior */
   .franja{ height:6px; display:flex; }
   .franja span{ flex:1; }
   .franja .v{ background:var(--verde); }
   .franja .b{ background:var(--papel); border-top:1px solid var(--borde); border-bottom:1px solid var(--borde); }
   .franja .r{ background:var(--rojo); }
 
-  header{
+  /* Estilos de la cabecera principal */
+  header{ 
     background:var(--papel);
     padding:48px 24px 40px;
     text-align:center;
@@ -57,6 +63,7 @@
     margin:0 auto;
   }
 
+  /* Barra de navegación horizontal y fija (sticky) al hacer scroll */
   nav{
     display:flex;
     justify-content:center;
@@ -82,12 +89,14 @@
   nav a:hover{ background:var(--verde); color:#fff; }
   nav a.activo{ background:var(--verde); color:#fff; }
 
+  /* Contenedor del contenido principal */
   main{
     max-width:840px;
     margin:0 auto;
     padding:64px 24px;
   }
 
+  /* Estilos para el texto secundario (eyebrow) y subtítulos */
   .eyebrow{
     color:var(--rojo);
     font-weight:600;
@@ -105,14 +114,18 @@
     margin-bottom:36px;
   }
 
+  /* Cuadrícula (Grid) para mostrar las tarjetas en 2 columnas */
   .grid-datos{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:18px;
   }
+  /* Adaptación responsiva: se cambia a 1 sola columna en pantallas pequeñas */
   @media (max-width:640px){
     .grid-datos{ grid-template-columns:1fr; }
   }
+  
+  /* Estilos para las tarjetas de datos (verdes) y mitos (rojas) */
   .dato{
     background:var(--verde-suave);
     border:2px solid var(--verde);
@@ -129,6 +142,7 @@
   .dato.mito .etiqueta{ color:var(--rojo); }
   .dato p{ margin:0; color:var(--texto); font-size:0.96rem; }
 
+  /* Estilos para el pie de página institucional */
   footer{
     text-align:center;
     padding:36px 24px;
@@ -150,13 +164,16 @@
 </head>
 <body>
 
+<!-- Franja tricolor superior -->
 <div class="franja"><span class="v"></span><span class="b"></span><span class="r"></span></div>
 
+<!-- Encabezado de la página -->
 <header>
   <div class="fecha">Septiembre · Mes de la Patria</div>
   <h1>Datos curiosos y mitos</h1>
 </header>
 
+<!-- Menú de enlaces de navegación -->
 <nav>
   <a href="index.html">Inicio</a>
   <a href="linea-tiempo.html">Fechas importantes</a>
@@ -164,12 +181,14 @@
   <a href="datos-mitos.html" class="activo">Datos y mitos</a>
 </nav>
 
+<!-- Bloque del contenido único e importante de la página -->
 <main>
   <section>
     <div class="eyebrow">Para saber más</div>
     <h2>Datos curiosos y mitos</h2>
     <p class="intro">Algunas cosas que quizá no sabías, y otras que se cuentan pero no son del todo ciertas.</p>
 
+    <!-- Sección de tarjetas con los datos y mitos -->
     <div class="grid-datos">
       <div class="dato">
         <div class="etiqueta">Dato curioso</div>
@@ -199,6 +218,7 @@
   </section>
 </main>
 
+<!-- Pie de página con los datos escolares del estudiante -->
 <footer>
   <div class="footer-datos">
     <div><span>Alumno: </span>Duarte Granados Said</div>
